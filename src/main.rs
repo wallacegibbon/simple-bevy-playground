@@ -45,7 +45,6 @@ impl Plugin for HelloPlugin {
 			.insert_resource(GreetTimer(Timer::from_seconds(2.0, TimerMode::Repeating)))
 			.add_systems(Startup, add_people)
 			.add_systems(Update, (greet_people_system, print_position_system));
-
 	}
 }
 
